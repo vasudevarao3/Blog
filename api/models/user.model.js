@@ -19,6 +19,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         default: "https://thesurrianlife.files.wordpress.com/2011/07/macaque-monkey-canon-dslr-self-portrait-234x300.jpg"
     },
+    isAdmin: {
+        type: Boolean,
+        default: false,
+    },
     },{timestamps: true}
 );
 
