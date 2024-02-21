@@ -45,7 +45,7 @@ export default function PostPage() {
         </h1>
         {/* { post.category!=='uncategorized' &&  */}
         {    <Link to={`/search?category=${post && post.category}`} className='self-center mt-5'>
-                <Button>
+                <Button color='gray' pill size='xs'>
                     {post && post.category}
                 </Button>
             </Link>
