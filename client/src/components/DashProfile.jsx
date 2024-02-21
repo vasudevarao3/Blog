@@ -19,7 +19,7 @@ export default function DashProfile() {
   const [imageFileUploading, setImageFileUploading] = useState(false);
   const [updateUserSuccess, setUpdateUserSuccess] = useState(null);
   const [updateUserError, setUpdateUserError] = useState(null);
-  const [showModel, setShowModel] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const [formData, setFormData ] = useState({});
   const filePickerRef = useRef();
   const dispatch = useDispatch();
@@ -106,7 +106,7 @@ export default function DashProfile() {
     }
   }
 const handleDeleteUser = async () => {
-  setShowModel(false);
+  setShowModal(false);
   try {
     dispatch(deleteUserStart());
     const res = await fetch(`/api/user/delete/${currentUser._id}`,{
@@ -188,7 +188,7 @@ const handleSignout = async() => {
         }
       </form>
       <div className='text-red-500 flex justify-between mt-5'>
-        <span onClick={() => setShowModel(true)} className='cursor-pointer'>Delete Account</span>
+        <span onClick={() => setShowModal(true)} className='cursor-pointer'>Delete Account</span>
         <span onClick={handleSignout} className='cursor-pointer'>Sign Out</span>
       </div>
       {updateUserSuccess && (
@@ -206,7 +206,7 @@ const handleSignout = async() => {
           {error}
         </Alert>
       )}
-      <Modal show={showModel} onClose={() => setShowModel(false)} popup size='md'>
+      <Modal show={showModal} onClose={() => setShowModal(false)} popup size='md'>
         <Modal.Header/>
           <Modal.Body>
             <div className='text-center'>
@@ -216,7 +216,7 @@ const handleSignout = async() => {
                 <Button color='failure' onClick={handleDeleteUser}>
                   Yes, I'm Sure
                 </Button>
-                <Button color='gray' onClick={() => setShowModel(false)}>No, cancel</Button>
+                <Button color='gray' onClick={() => setShowModal(false)}>No, cancel</Button>
               </div>
             </div>
           </Modal.Body>
