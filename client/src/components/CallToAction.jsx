@@ -12,7 +12,7 @@ export default function CallToAction() {
                 Checkout these resources with Types of gorillas
             </p>
             <Button gradientDuoTone='purpleToPink' className='rounded-tl-xl rounded-bl-none'>
-                <a href='www.google.com' target='_blank' rel='noopener noreferrer'>
+                <a href='https://www.google.com' target='_blank' rel='noopener noreferrer'>
                     Siggu Gorilla
                 </a>
             </Button>
