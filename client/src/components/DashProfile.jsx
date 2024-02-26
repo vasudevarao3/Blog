@@ -178,7 +178,7 @@ const handleSignout = async() => {
           {loading ? 'Loading...' : 'Update'}
         </Button>
         {
-          currentUser.isAdmin && (
+          currentUser && (
             <Link to='/create-post'>
               <Button type='button' gradientDuoTone='purpleToPink' className='w-full'>
                 Create a post

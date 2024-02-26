@@ -49,7 +49,7 @@ export default function DashSidebar() {
                     </Sidebar.Item>
                   </Link>
                 )}
-                { currentUser.isAdmin && (
+                { currentUser && (
                   <Link to='/dashboard?tab=posts'>
                     <Sidebar.Item active={tab === 'posts'} icon={HiDocumentText} labelColor='dark' as='div'>
                         Posts
