@@ -24,7 +24,6 @@ export default function DashAllPosts() {
             setShowMore(false);
           }
         }
-        console.log(data);
       } catch (error) {
         console.log(error.message);
       }
